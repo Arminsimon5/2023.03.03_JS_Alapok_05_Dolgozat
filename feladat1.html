@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 1</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Feladat 1</h1>
+        <div>
+            <input type="number" placeholder="Adjon meg egy számot" id="szamInput">
+        </div>
+        <div>
+            <button type="button" id="hozzaAdGomb" onclick="hozzaAd()">Hozzáad</button>
+            <button type="button" id="kiIrGomb" onclick="kiIr()">Kiír</button>
+        </div>
+        <div>
+            <p id="visszajelzes"></p>
+        </div>
+    </div>
+    <script>
+        const input = document.getElementById("szamInput");
+        const lista = [];
+        const listaBekezdes = document.getElementById("visszajelzes");
+        function hozzaAd() {
+            lista.push(input.value);
+        }
+        function kiIr() {
+            
+            listaBekezdes.innerHTML = lista.join() , ",";
+            }
+    </script>
+</body>
+</html>

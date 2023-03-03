@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 4</title>
+</head>
+<body>
+    <div>
+        <h1>Feladat 4</h1>
+        <div>
+            <label for="szamInput">Adja meg a hét napjának egy számát: </label>
+            <input type="number" id="szamInput">
+        </div>
+        <div>
+            <button type="button" id="mehet">Mehet</button>
+        </div>
+        <div>
+            <p id="visszajelzes"></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("mehet").addEventListener("click", ()=>{
+            const szam = parseInt(document.getElementById("szamInput").value);
+            const visszajelzes = document.getElementById("visszajelzes")
+            console.log(szam);
+            switch (szam) {
+                case 1:
+                    visszajelzes.innerHTML = "Hétfő"
+                    break;
+                
+                case 2:
+                    visszajelzes.innerHTML = "Kedd"
+                    break;
+
+                case 3:
+                    visszajelzes.innerHTML = "Szerda"
+                    break;
+                case 4:
+                    visszajelzes.innerHTML = "Csütörtök"
+                    break;
+
+                case 5:
+                    visszajelzes.innerHTML = "Péntek"
+                    break;
+
+                case 6:
+                    visszajelzes.innerHTML = "Szombat"
+                    break;
+
+                case 7:
+                    visszajelzes.innerHTML = "Vasárnap"
+                    break;
+            
+                default:
+                    visszajelzes.innerHTML = "Nem megfelelő számot adott meg"
+                    break;
+            }
+        })
+    </script>
+</body>
+</html>

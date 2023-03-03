@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 5</title>
+</head>
+<body>
+    <div>
+        <h1>Feladat 5</h1>
+        <form name="pizzaUrlap" method="GET">
+            <h2>Megrendelő adatai:</h2>
+            <div>
+                <label for="nevInput">Teljes név: </label>
+                <input type="text" name="nev" id="nevInput">
+            </div>
+            <div>
+                <label for="telefonszamInput">Telefonszám: </label>
+                <input type="text" name="telefonszam" id="telefonszamInput">
+            </div>
+            <div>
+                <label for="iranyitoszamInput">Irányítószám: </label>
+                <input type="text" name="iranyitoszam" id="iranyitoszamInput">
+            </div>
+            <div>
+                <label for="varosInput">Város: </label>
+                <input type="text" name="varos" id="varosInput">
+            </div>
+            <div>
+                <label for="utcaInput">Utca: </label>
+                <input type="text" name="utca" id="utcaInput">
+            </div>
+            <div>
+                <label for="hazszamInput">Házszám:: </label>
+                <input type="text" name="hazszam" id="hazszamInput">
+            </div>
+            <h2>Pizza adatai:</h2>
+            <div>
+                <label for="alap">Váasszon alapot a pizzához: </label>
+                <select id="alap">
+                    <option value="" disabled selected>--Valasszon...--</option>
+                    <option value="tejfolos">Tejfölös alap</option>
+                    <option value="paradicsomos">Paradicsomos alap</option>
+                </select>
+            </div>
+            <div>
+                <div>
+                    <label for="feltet">Válasszon feltétet a pizzához: </label><br>
+                    <input type="checkbox" name="feltet" id="gomba">
+                    <label for="gomba">Gomba</label><br>
+                    <input type="checkbox" name="feltet" id="sajt">
+                    <label for="sajt">Sajt</label><br>
+                    <input type="checkbox" name="feltet" id="tojas">
+                    <label for="tojas">Tojás</label><br>
+                    <input type="checkbox" name="feltet" id="bacon">
+                    <label for="bacon">Bacon</label><br>
+                    <input type="checkbox" name="feltet" id="szalami">
+                    <label for="szalami">Szalámi</label><br>
+                </div>
+            </div>
+            <h2>Egyéb: </h2>
+                <input type="text" name="egyeb" id="egyebInput">
+        </form>
+        <button type="button" id="gomb">Mehet</button>
+    </div>
+    <script>
+        document.getElementById("gomb").addEventListener("click", ()=> {
+            const pizzaUrlap = document.forms["pizzaUrlap"];
+            const nev = pizzaUrlap["nev"].value;
+            const telefonszam = pizzaUrlap["telefonszam"].value;
+            const iranyitoszam = pizzaUrlap["iranyitoszam"].value;
+            const varos = pizzaUrlap["varos"].value;
+            const utca = pizzaUrlap["utca"].value;
+            const hazszam = pizzaUrlap["hazszam"].value;
+            const alap = pizzaUrlap["alap"].value;
+            const feltet = pizzaUrlap["feltet"].value;
+            const egyeb = pizzaUrlap["egyeb"].value;
+
+            const adatok = {
+                Név: nev,
+                Telefonszám: telefonszam,
+                Irányitószám: iranyitoszam,
+                Város: varos,
+                Utca: utca,
+                Házszám: hazszam,
+                Alap: alap,
+                Feltét: feltet,
+                egyeb: egyeb
+            }
+            console.log(adatok);
+        });
+
+    </script>
+</body>
+</html>

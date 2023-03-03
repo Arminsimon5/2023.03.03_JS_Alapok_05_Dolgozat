@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 2</title>
+</head>
+<body>
+    <div>
+        <h1>Feladat 2</h1>
+        <div>
+            <input type="text" id="vezeteknevInput" placeholder="vezetéknév">
+        </div>
+        <div>
+            <input type="text" id="keresztnevInput" placeholder="keresztnév">   
+        </div>
+        <div>
+            <input type="number" id="eletkorInput" placeholder="életkor">
+        </div>
+        <div>
+            <p id="visszajelzes"></p>
+        </div>
+    </div>
+    <script>
+        const vezeteknev = document.getElementById("vezeteknevInput").value;
+        const keresztnev = document.getElementById("keresztnevInput").value;
+        const eletkor = document.getElementById("eletkorInput").value;
+        const visszajelzes = document.getElementById("visszajelzes")
+
+        visszajelzes.innerHTML = vezeteknev +" "+ keresztnev +" ("+ eletkor +" év)"; 
+
+
+    </script>
+</body>
+</html>

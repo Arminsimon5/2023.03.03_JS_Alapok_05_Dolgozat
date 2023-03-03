@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 3</title>
+</head>
+<body>
+    <div>
+        <h1>Feladat 3</h1>
+        <div>
+            <label for="aoldalInput">a oldal: </label>
+            <input type="number" id="aoldalInput">
+        </div>
+        <div>
+            <label for="boldalInput">b oldal: </label>
+            <input type="number" id="boldalInput">            
+        </div>
+        <div>
+            <button type="button" onclick="szamitas()">Számítás</button>
+        </div>
+        <div>
+            <p id="visszajelzes"></p>
+        </div>
+    </div>
+    <script>
+        function szamitas() {
+            const aoldal = parseFloat(document.getElementById("aoldalInput").value);
+            const boldal = parseFloat(document.getElementById("boldalInput").value);
+            const kerulet = parseFloat(aoldal + boldal)
+            const terulet = parseFloat(aoldal * boldal)
+            document.getElementById("visszajelzes").innerHTML = "A kerulet: "+kerulet +", a terulet: "+ terulet 
+        } 
+    </script>
+</body>
+</html>
